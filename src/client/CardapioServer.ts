@@ -30,3 +30,17 @@ export function addFood(title: String, price: Number, image: String) {
     })    
     return promise
 }
+
+
+export function deleteFoodById(foodId: Number | String) {
+    const promise = new Promise<Food[]>((resolve, reject) => {
+        axios.delete(`http://localhost:8080/food/${foodId}`)
+        .then((response) => {
+            resolve(response.data)
+        }).catch((error) => {
+            console.error(error)
+            reject(error)
+        })
+    })    
+    return promise
+}

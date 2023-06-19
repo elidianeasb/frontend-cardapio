@@ -2,15 +2,16 @@ import Food from './Food'
 
 interface FoodListProps {
     foods: Food[]
+    foodDeleted: () => void
 }
 
-function FoodList({ foods }: FoodListProps) {
+function FoodList({ foods, foodDeleted }: FoodListProps) {
     console.log(foods)
     return (
         <div  className="card-grid">
             {
                 foods.map((food, index) => (
-                    <Food key={index} title={food.title} price={food.price} image={food.image} />
+                    <Food key={index} food={food} foodDeleted={foodDeleted}/>
                 ))
             }
         </div>

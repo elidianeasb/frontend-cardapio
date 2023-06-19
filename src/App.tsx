@@ -7,7 +7,7 @@ import AddFood from './components/addFood';
 
 declare global {
   interface Food {
-    id?: number,
+    id: number,
     title: string,
     price: number,
     image: string
@@ -39,7 +39,7 @@ function App() {
     <div className='container'>
       <h1>Cardápio</h1>
       <div>
-        <FoodList foods={foods}/>
+        <FoodList foods={foods} foodDeleted={allFoods}/>
         <AddFood foodCreated={allFoods}/>
       </div>
     </div>

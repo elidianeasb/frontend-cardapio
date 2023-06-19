@@ -33,7 +33,7 @@ function AddFood({foodCreated}: AddFoodProps) {
                     <input value={price} type="number" onChange={(event) => setPrice(event.target.valueAsNumber)}/>
                     <input value={image} type="text" onChange={(event) => setImage(event.target.value)} />
                     <button onClick={addNewFood} className="btn-secondary">Adicionar novo item</button>
-                    <button className="btn-close">Close</button>
+                    <button className="btn-close">Fechar</button>
                 </form>
             </div>
         </div>
