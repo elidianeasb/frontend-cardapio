@@ -1,0 +1,117 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 16px
+}
+
+.container button {
+  background-color: #0275d8;
+  color: white;
+  font-weight: bold;
+  position: fixed;
+  bottom: 16px;
+  right: 24px;
+  transition: all 0.1s linear 0.1s;
+}
+
+.container button:hover {
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 7px 0px;
+  transform: scale(1.1);
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 250px;
+  border-radius: 8px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  padding: 0;
+}
+
+.card img {
+  border-radius: 8px 8px 0 0;
+  width: 250px;
+  height: 200px;
+}
+
+.input-overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0,0,0,0.4);
+  overflow: hidden;
+  height: 100vh;
+  width: 100vw;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  z-index: 999;
+}
+
+.input-overlay .input-body {
+  background-color: white;
+  padding: 24px;
+  height: 50%;
+  width: 60%;
+  border-radius: 24px;
+
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.input-overlay .input-body h2 {
+  font-size: 22px;
+}
+
+.input-overlay .input-body .input-container {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.input-overlay .input-body input {
+  padding: 12px;
+  border: 2px solid #c6c5c5c5;
+  color: rgba(0,0,0,0.9);
+  font-size: 18px;
+  line-height: 24px;
+  border-radius: 12px;
+  width: 100%;
+
+  margin-bottom: 12px;
+}
+
+.input-overlay .input-body label {
+  color: #242424;
+  font-weight: 600;
+  margin-bottom: 8px;
+  font-size: 18px;
+}
+
+.input-overlay .input-body .btn-secondary {
+  position:initial;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin-top: 32px;
+}
+
+.input-overlay .input-body .btn-close{
+  background-color: grey;
+}
+
