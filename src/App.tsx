@@ -1,6 +1,6 @@
 import './App.css'
 import { getAllFoods } from './client/CardapioServer';
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import FoodList from './components/FoodList';
 import AddFood from './components/addFood';
 

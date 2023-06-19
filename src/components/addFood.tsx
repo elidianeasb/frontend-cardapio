@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { addFood } from "../client/CardapioServer";
 
 interface AddFoodProps {
@@ -30,7 +30,7 @@ function AddFood({foodCreated}: AddFoodProps) {
                 <h2>Cadastre um novo item no cardápio</h2>
                 <form className="input-container">
                     <input value={title} type="text" onChange={(event) => setTitle(event.target.value)} />
-                    <input value={price} type="text" onChange={(event) => setPrice(event.target.valueAsNumber)}/>
+                    <input value={price} type="number" onChange={(event) => setPrice(event.target.valueAsNumber)}/>
                     <input value={image} type="text" onChange={(event) => setImage(event.target.value)} />
                     <button onClick={addNewFood} className="btn-secondary">Adicionar novo item</button>
                     <button className="btn-close">Close</button>
